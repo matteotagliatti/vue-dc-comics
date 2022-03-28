@@ -1,6 +1,6 @@
 <template>
   <header class="container">
-    <img src="../assets/img/dc-logo-bg.png" alt="Logo" />
+    <img src="../assets/img/dc-logo.png" alt="Logo" />
     <ul>
       <li v-for="(li, index) in headerLis" :key="index">
         <a :class="index === 1 ? 'active' : ''" href="li.url"> {{ li.text }}</a>
