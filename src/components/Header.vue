@@ -1,9 +1,9 @@
 <template>
   <header>
-    <img src="../assets/dc-logo-bg.png" alt="Logo" />
+    <img src="../assets/img/dc-logo-bg.png" alt="Logo" />
     <ul>
       <li v-for="(li, index) in headerLis" :key="index">
-        <a href="li.url"> {{ li.text }}</a>
+        <a :class="index === 1 ? 'active' : ''" href="li.url"> {{ li.text }}</a>
       </li>
     </ul>
   </header>
@@ -62,6 +62,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/style.scss";
+
 header {
   display: flex;
   justify-content: space-between;
@@ -70,6 +72,7 @@ header {
 
 img {
   padding: 1rem 0;
+
   width: 80px;
 }
 
@@ -84,9 +87,15 @@ li {
   font-size: 0.8rem;
 
   a {
+    padding: 3rem 0;
     color: black;
     text-decoration: none;
     font-weight: bold;
+
+    &.active {
+      color: $blue;
+      border-bottom: 5px solid $blue;
+    }
   }
 }
 </style>
