@@ -5,52 +5,22 @@
         <h1>Content goes here</h1>
       </div>
     </main>
-    <div id="links">
-      <div class="container">
-        <div v-for="(element, index) in links" :key="index">
-          <img :src="`${element.img}`" :alt="element.text" />
-          <span>{{ element.text }}</span>
-        </div>
-      </div>
-    </div>
+    <LinskDiv />
   </div>
 </template>
 
 <script>
+import LinskDiv from "./Links.vue";
+
 export default {
   name: "MainDiv",
-  data() {
-    return {
-      links: [
-        {
-          text: "Digital comics",
-          img: require("../assets/img/buy-comics-digital-comics.png"),
-        },
-        {
-          text: "DC Merchandise",
-          img: require("../assets/img/buy-comics-merchandise.png"),
-        },
-        {
-          text: "Sybscription",
-          img: require("../assets/img/buy-comics-subscriptions.png"),
-        },
-        {
-          text: "Comic Shop Locator",
-          img: require("../assets/img/buy-comics-shop-locator.png"),
-        },
-        {
-          text: "DC Power Visa",
-          img: require("../assets/img/buy-dc-power-visa.svg"),
-        },
-      ],
-    };
+  components: {
+    LinskDiv,
   },
 };
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/style.scss";
-
 main {
   padding: 3rem 0;
   background-color: black;
@@ -58,37 +28,6 @@ main {
   h1 {
     color: white;
     font-weight: bold;
-  }
-}
-
-#links {
-  position: relative;
-  padding: 3rem 0;
-  background-color: $blue;
-  z-index: 1;
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    div {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-
-      img {
-        width: 50px;
-        height: 50px;
-        object-fit: contain;
-      }
-
-      span {
-        font-size: 0.8rem;
-        color: white;
-        text-transform: uppercase;
-      }
-    }
   }
 }
 </style>
