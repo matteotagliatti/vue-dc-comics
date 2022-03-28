@@ -8,7 +8,7 @@
     <div id="links">
       <div class="container">
         <div v-for="(element, index) in links" :key="index">
-          <img :src="element.img" :alt="element.text" />
+          <img :src="`${element.img}`" :alt="element.text" />
           <span>{{ element.text }}</span>
         </div>
       </div>
@@ -24,23 +24,23 @@ export default {
       links: [
         {
           text: "Digital comics",
-          img: "../assets/img//img/buy-comics-digital-comics.png",
+          img: require("../assets/img/buy-comics-digital-comics.png"),
         },
         {
           text: "DC Merchandise",
-          img: "../assets/img/buy-comics-merch.png",
+          img: require("../assets/img/buy-comics-merchandise.png"),
         },
         {
           text: "Sybscription",
-          img: "../assets/img/buy-comics-subscription.png",
+          img: require("../assets/img/buy-comics-subscriptions.png"),
         },
         {
           text: "Comic Shop Locator",
-          img: "../assets/img/buy-comics-shop-locator.png",
+          img: require("../assets/img/buy-comics-shop-locator.png"),
         },
         {
           text: "DC Power Visa",
-          img: "../assets/img/buy-comics-power-visa.png",
+          img: require("../assets/img/buy-dc-power-visa.svg"),
         },
       ],
     };
@@ -68,10 +68,24 @@ main {
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    span {
-      color: white;
-      text-transform: uppercase;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+      }
+
+      span {
+        font-size: 0.8rem;
+        color: white;
+        text-transform: uppercase;
+      }
     }
   }
 }

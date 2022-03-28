@@ -87,7 +87,7 @@ li {
   font-size: 0.8rem;
 
   a {
-    padding: 3rem 0;
+    padding: 2.8rem 0;
     color: black;
     text-decoration: none;
     font-weight: bold;
