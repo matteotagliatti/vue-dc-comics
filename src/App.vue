@@ -31,8 +31,6 @@ export default {
 }
 
 #app {
-  max-width: 1100px;
-  margin: 0 auto;
   font-family: sans-serif;
 }
 

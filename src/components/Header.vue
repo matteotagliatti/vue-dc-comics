@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="container">
     <img src="../assets/img/dc-logo-bg.png" alt="Logo" />
     <ul>
       <li v-for="(li, index) in headerLis" :key="index">
