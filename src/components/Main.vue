@@ -62,8 +62,10 @@ main {
 }
 
 #links {
+  position: relative;
   padding: 3rem 0;
   background-color: $blue;
+  z-index: 1;
 
   .container {
     display: flex;

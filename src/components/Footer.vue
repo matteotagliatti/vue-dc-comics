@@ -1,7 +1,40 @@
 <template>
   <footer>
     <div class="footer-up">
-      <div class="container"></div>
+      <div class="container">
+        <div id="links">
+          <!-- First Column -->
+          <div>
+            <ul>
+              <li v-for="(link, index) in dcComicsLinks" :key="index">
+                {{ link }}
+              </li>
+            </ul>
+            <ul>
+              <li v-for="(link, index) in shopLinks" :key="index">
+                {{ link }}
+              </li>
+            </ul>
+          </div>
+          <!-- Second Column -->
+          <div>
+            <ul>
+              <li v-for="(link, index) in dcLinks" :key="index">
+                {{ link }}
+              </li>
+            </ul>
+          </div>
+          <!-- Third Column -->
+          <div>
+            <ul>
+              <li v-for="(link, index) in sitesLinks" :key="index">
+                {{ link }}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img src="../assets/img/dc-logo-bg.png" alt="Logo" />
+      </div>
     </div>
     <div class="footer-down">
       <div class="container">
@@ -25,6 +58,41 @@ export default {
   name: "FooterDiv",
   data() {
     return {
+      dcComicsLinks: [
+        "DC Comics",
+        "Characters",
+        "Comics",
+        "Movies",
+        "Tv",
+        "Games",
+        "Collectibles",
+        "Videos",
+        "Fans",
+        "News",
+      ],
+      shopLinks: ["Shop", "Shop DC", "Shop DC Collectibles"],
+      dcLinks: [
+        "DC",
+        "Terms of Use",
+        "Privacy policy",
+        "Ad Choices",
+        "Advertising",
+        "Jobs",
+        "Subscription",
+        "Talent Workshop",
+        "CPSC Certificates",
+        "Ratings",
+        "Shop Help",
+        "Contact Us",
+      ],
+      sitesLinks: [
+        "Sites",
+        "DC",
+        "MAD Magazine",
+        "DC Kids",
+        "DC Universe",
+        "DC Power Use",
+      ],
       socialImg: [
         {
           text: "Facebook",
@@ -61,13 +129,49 @@ export default {
 @import "../assets/scss/style.scss";
 
 .footer-up {
-  height: 500px;
   background-image: url(../assets/img/footer-bg.jpg);
+
+  .container {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    #links {
+      color: white;
+      display: flex;
+      gap: 3rem;
+
+      ul {
+        margin-bottom: 2rem;
+      }
+
+      li:first-child {
+        margin-bottom: 0.8rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        opacity: 1;
+      }
+
+      li {
+        margin-bottom: 0.3rem;
+        font-size: 0.8rem;
+        opacity: 0.5;
+      }
+    }
+
+    img {
+      margin: -7rem;
+      overflow: hidden;
+    }
+  }
 }
 
 .footer-down {
+  position: relative;
   padding: 2.2rem 0;
   background-color: #303030;
+  z-index: 1;
 
   .container {
     display: flex;
