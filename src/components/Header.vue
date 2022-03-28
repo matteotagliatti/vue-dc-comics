@@ -65,8 +65,7 @@ export default {
 @import "../assets/scss/style.scss";
 
 header {
-  display: flex;
-  justify-content: space-between;
+  @include flex-between;
   align-items: center;
 }
 

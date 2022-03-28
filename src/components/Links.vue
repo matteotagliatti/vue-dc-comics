@@ -51,9 +51,8 @@ export default {
   z-index: 1;
 
   .container {
-    display: flex;
+    @include flex-between;
     align-items: center;
-    justify-content: space-between;
 
     div {
       display: flex;

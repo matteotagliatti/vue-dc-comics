@@ -133,8 +133,7 @@ export default {
 
   .container {
     padding: 2rem 0;
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
 
     #links {
       color: white;
@@ -174,8 +173,7 @@ export default {
   z-index: 1;
 
   .container {
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
   }
 
   a {
