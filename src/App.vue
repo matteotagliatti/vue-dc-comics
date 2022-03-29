@@ -40,6 +40,7 @@ li {
 
 .container {
   max-width: 1100px;
+  min-width: 1000px;
   margin: 0 auto;
 }
 </style>
