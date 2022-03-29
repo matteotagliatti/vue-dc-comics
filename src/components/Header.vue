@@ -71,7 +71,6 @@ header {
 
 img {
   padding: 1rem 0;
-
   width: 80px;
 }
 

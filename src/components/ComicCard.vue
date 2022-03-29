@@ -15,6 +15,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/style.scss";
+
 div {
   margin-bottom: 3rem;
   width: 10rem;
@@ -25,8 +27,7 @@ div {
 
   img {
     height: 10rem;
-    object-fit: cover;
-    object-position: top;
+    @include object-fit-top;
   }
 
   span {

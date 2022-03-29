@@ -179,10 +179,7 @@ export default {
   a {
     padding: 1rem;
     border: 2px solid $blue;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
+    @include base-button;
   }
 
   #social {

@@ -8,7 +8,7 @@
           alt="Jumbotron"
         />
         <div class="container">
-          <a class="current-series" href="#">Current Series </a>
+          <a href="#">Current Series </a>
         </div>
       </div>
 
@@ -62,11 +62,10 @@ main {
       margin-bottom: 3rem;
       width: 100%;
       height: 25rem;
-      object-fit: cover;
-      object-position: top;
+      @include object-fit-top;
     }
 
-    .current-series {
+    a {
       position: absolute;
       bottom: 1.8rem;
       padding: 0.7rem 1rem;
@@ -85,10 +84,7 @@ main {
 
   a {
     padding: 1rem 3rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
+    @include base-button;
     background-color: $blue;
   }
 }
