@@ -23,4 +23,23 @@ export default {
 
 <style lang="scss">
 @import "./assets/scss/style.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  font-family: sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 </style>
