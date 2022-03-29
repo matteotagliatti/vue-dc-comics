@@ -1,6 +1,17 @@
 <template>
   <div>
     <main>
+      <div class="jumbotron">
+        <img
+          class="jumbotron"
+          src="../assets/img/jumbotron.jpg"
+          alt="Jumbotron"
+        />
+        <div class="container">
+          <a class="current-series" href="#">Current Series </a>
+        </div>
+      </div>
+
       <div class="container">
         <div class="cards">
           <ComicCard
@@ -41,8 +52,27 @@ export default {
 @import "../assets/scss/style.scss";
 
 main {
-  padding: 3rem 0;
+  padding-bottom: 3rem;
   background-color: black;
+
+  .jumbotron {
+    position: relative;
+
+    img {
+      margin-bottom: 3rem;
+      width: 100%;
+      height: 25rem;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .current-series {
+      position: absolute;
+      bottom: 1.8rem;
+      padding: 0.7rem 1rem;
+      font-size: 1.2rem;
+    }
+  }
 
   .cards {
     @include flex-between;
@@ -51,15 +81,15 @@ main {
 
   .load-more {
     text-align: center;
+  }
 
-    a {
-      padding: 1rem 3rem;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      color: white;
-      background-color: $blue;
-    }
+  a {
+    padding: 1rem 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: $blue;
   }
 }
 </style>
