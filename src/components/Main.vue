@@ -44,11 +44,6 @@ main {
   padding: 3rem 0;
   background-color: black;
 
-  h1 {
-    color: white;
-    font-weight: bold;
-  }
-
   .cards {
     @include flex-between;
     flex-wrap: wrap;
@@ -58,12 +53,11 @@ main {
     text-align: center;
 
     a {
-      margin: 0 auto;
       padding: 1rem 3rem;
-      color: white;
       text-decoration: none;
       text-transform: uppercase;
       font-weight: bold;
+      color: white;
       background-color: $blue;
     }
   }

@@ -18,16 +18,19 @@ export default {
 div {
   margin-bottom: 3rem;
   width: 10rem;
-
-  color: white;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
+  color: white;
 
   img {
     height: 10rem;
     object-fit: cover;
     object-position: top;
+  }
+
+  span {
+    text-transform: uppercase;
   }
 }
 </style>

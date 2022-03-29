@@ -160,7 +160,7 @@ export default {
     }
 
     img {
-      margin: -7rem;
+      margin: -7rem 0;
       overflow: hidden;
     }
   }
